@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyectos.css">
+    <title>Casos de Estudio | Jhonny Solorzano Urbina</title>
+    <!-- Iconos y Fuentes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Fondo de Orbes Decorativos -->
+    <div class="glow-bg">
+        <div class="orbe orbe-1"></div>
+        <div class="orbe orbe-2"></div>
+    </div>
+
+    <!-- Navegación -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+                <div class="logo">JH<span>SOUR</span></div>
+                <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-details-section">
+        <div class="container">
+            
+            <!-- ==========================================================================
+                 PROYECTO 1: SPARTA CONTROL (PWA PRIVADA)
+                 ========================================================================== -->
+            <div id="sparta-control" class="project-wrapper">
+                <div class="project-header">
+                    <div class="badge-group">
+                        <span class="badge">PWA (Progressive Web App)</span>
+                        <span class="badge private"><i class="fa-solid fa-lock"></i> Sistema de Uso Interno</span>
+                    </div>
+                    <h1>PWA Sparta - Control Administrativo &amp; Gestión de Membresías</h1>
+                </div>
+
+                <div class="project-content-grid">
+                    <div class="project-description">
+                        <h2>El Desafío Operativo</h2>
+                        <p>
+                            El centro de entrenamiento SPARTA operaba las finanzas y las membresías de manera escrita y descentralizada. Se necesitaba una solución extremadamente ágil y segura, que no requiriera instalaciones complejas en los dispositivos y que pudiera cargarse de inmediato a los entrenadores en plena sala.
+                        </p>
+
+                        <h2>Nuestra Propuesta Tecnológica</h2>
+                        <p>
+                            Estructuré y desarrollé una PWA sumamente veloz que centraliza el control de ingresos. Permite a los preparadores autorizados autenticarse velozmente mediante Google y auditar estados de cuenta directamente en sus dispositivos.
+                        </p>
+
+                        <ul class="bullet-points">
+                            <li><strong>CRUD de Clientes con Firebase:</strong> Gestión completa e instantánea para inscribir atletas ("Spartans"), editar perfiles de pago y suspender accesos cuando sea necesario.</li>
+                            <li><strong>Segmentación por Categorías:</strong> Buscador predictivo inteligente y filtrado directo según planes específicos (Plan Semanal, Mensual, Anual o Gratuito).</li>
+                            <li><strong>Alerta Inteligente de Cobros:</strong> El algoritmo detecta automáticamente membresías próximas a vencer en un lapso de 3 días o menos, permitiendo un cobro proactivo.</li>
+                        </ul>
+
+                        <h2>Tecnologías Aplicadas</h2>
+                        <div class="tech-stack">
+                            <div class="tech-box"><i class="fab fa-html5"></i> HTML5 Semántico</div>
+                            <div class="tech-box"><i class="fab fa-css3-alt"></i> CSS3 Grid &amp; Flexbox</div>
+                            <div class="tech-box"><i class="fab fa-js"></i> JavaScript Nativo</div>
+                            <div class="tech-box"><i class="fas fa-fire"></i> Firebase Firestore</div>
+                            <div class="tech-box"><i class="fa-solid fa-user-shield"></i> Firebase Authentication</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <div class="main-img">
+                            <img id="sparta-large-img" src="img/WhatsApp Image 2026-07-16 at 10.32.34.jpeg" alt="Pantalla de Control de Estados Sparta">
+                        </div>
+                        <div class="thumbnails">
+                            <div class="thumb active" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.32.56.jpeg', this, 'sparta-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.32.56.jpeg" alt="Control de Estados">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.32.34.jpeg', this, 'sparta-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.32.34.jpeg" alt="Acceso Administrativo">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.35.29.jpeg', this, 'sparta-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.35.29.jpeg" alt="Gestión de Spartans">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 PROYECTO 2: SPARTA LANDING (SITIO PÚBLICO)
+                 ========================================================================== -->
+            <div id="sparta-landing" class="project-wrapper">
+                <div class="project-header">
+                    <div class="badge-group">
+                        <span class="badge">Sitio Web</span>
+                        <span class="badge public"><i class="fa-solid fa-globe"></i> En Producción</span>
+                    </div>
+                    <h1>Centro de entrenamiento Sparta</h1>
+                </div>
+
+                <div class="project-content-grid">
+                    <div class="project-description">
+                        <h2>El Desafío Comercial</h2>
+                        <p>
+                            El centro de entrenamiento requería de una vitrina digital imponente que no solo presentara sus servicios de musculación y fuerza, sino que transmitiera fielmente su ruda filosofía de entrenamiento: "Aquí no se entrena el cuerpo, se forja el carácter". 
+                        </p>
+
+                        <h2>Nuestra Solución</h2>
+                        <p>
+                            Desarrollé una landing page responsive de alto impacto visual y optimizada para dispositivos móviles. El sitio incluye un sistema interactivo llamado "Muro de Guerreros", una sección donde los clientes reales publican testimonios y frases motivacionales directamente a una base de datos conectada en la nube.
+                        </p>
+
+                        <ul class="bullet-points">
+                            <li><strong>Muro de Opiniones Dinámico:</strong> Conexión en tiempo real con Firebase Firestore para registrar, publicar y visualizar las opiniones de los atletas sin refrescar la página.</li>
+                            <li><strong>Formulario de Captación Inteligente:</strong> Sección "Únete a la Tribu" diseñada estratégicamente con validación estricta del lado del cliente.</li>
+                            <li><strong>Estética de Alto Rendimiento:</strong> Diseño premium con colores oscuros y acentos dorados que reflejan disciplina, vigor y comunidad.</li>
+                        </ul>
+
+                        <a href="https://centrosparta.web.app" target="_blank" class="btn-live">
+                            Visitar Sitio en Vivo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <h2 style="margin-top: 35px;">Tecnologías Aplicadas</h2>
+                        <div class="tech-stack">
+                            <div class="tech-box"><i class="fab fa-html5"></i> HTML5 Semántico</div>
+                            <div class="tech-box"><i class="fab fa-css3-alt"></i> CSS3 Grid &amp; Flexbox</div>
+                            <div class="tech-box"><i class="fab fa-js"></i> JavaScript Nativo</div>
+                            <div class="tech-box"><i class="fas fa-fire"></i> Firebase Firestore</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <div class="main-img">
+                            <img id="landing-large-img" src="img/WhatsApp Image 2026-07-16 at 10.38.25.jpeg" alt="Inicio de la Landing de Sparta">
+                        </div>
+                        <div class="thumbnails grid-6">
+                            <div class="thumb active" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.38.25.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.38.25.jpeg" alt="Hero Screen">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.38.13.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.38.13.jpeg" alt="Servicios Ofrecidos">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.37.25.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.37.25.jpeg" alt="Galería Hermandad">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.36.22.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.36.22.jpeg" alt="Muro de Guerreros">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.36.34.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.36.34.jpeg" alt="Formulario Contacto">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.37.57.jpeg', this, 'landing-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.37.57.jpeg" alt="Templo Sparta">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 PROYECTO 3: MISIÓN RIBAS (PWA PRIVADA - SANTA TERESA DEL TUY)
+                 ========================================================================== -->
+            <div id="mision-ribas" class="project-wrapper">
+                <div class="project-header">
+                    <div class="badge-group">
+                        <span class="badge">PWA (Progressive Web App)</span>
+                        <span class="badge private"><i class="fa-solid fa-lock"></i> Institucional y Privada</span>
+                    </div>
+                    <h1>PWA Misión Ribas - Coordinación Académica &amp; Procesamiento Dinámico</h1>
+                </div>
+
+                <div class="project-content-grid">
+                    <div class="project-description">
+                        <h2>El Desafío Institucional</h2>
+                        <p>
+                            La Fundación Misión Ribas de Santa Teresa del Tuy gestionaba de forma enteramente manual el registro de facilitadores y vencedores (estudiantes), resultando en retrasos organizativos y pérdida de planillas físicas. Se necesitaba una aplicación que permitiera unificar el control de coordinación académica con un límite estricto de acceso de seguridad para solo 6 personas del personal administrativo.
+                        </p>
+
+                        <h2>Nuestra Solución</h2>
+                        <p>
+                            Estructuré y desarrollé una PWA de alto rendimiento con Firebase Auth que limita el acceso exclusivamente al personal designado. Gracias a una integración profunda con Firestore en tiempo real, múltiples administradores pueden registrar facilitadores y vencedores simultáneamente desde cualquier dispositivo sin riesgo de colisiones de datos.
+                        </p>
+
+                        <ul class="bullet-points">
+                            <li><strong>Automatización del Registro Académico:</strong> Digitaliza procesos manuales reduciendo a cero el uso de papel en la coordinación de la fundación.</li>
+                            <li><strong>Descarga de Matrícula en PDF:</strong> Permite exportar y descargar las planillas oficiales y las matrículas de cada facilitador con sus respectivos estudiantes.</li>
+                            <li><strong>Sincronización en Tiempo Real:</strong> Panel interactivo que muestra ambientes académicos despachados, actividades institucionales recientes y estado del personal facilitador de inmediato.</li>
+                        </ul>
+
+                        <h2>Tecnologías Aplicadas</h2>
+                        <div class="tech-stack">
+                            <div class="tech-box"><i class="fab fa-html5"></i> HTML5 Semántico</div>
+                            <div class="tech-box"><i class="fab fa-css3-alt"></i> CSS3 Grid &amp; Flexbox</div>
+                            <div class="tech-box"><i class="fab fa-js"></i> JS Nativo (ES6)</div>
+                            <div class="tech-box"><i class="fas fa-fire"></i> Firebase Realtime Firestore</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <div class="main-img">
+                            <img id="ribas-large-img" src="img/WhatsApp Image 2026-07-16 at 10.40.34.jpeg" alt="Panel de Control Principal de Misión Ribas">
+                        </div>
+                        <div class="thumbnails grid-4">
+                            <div class="thumb active" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.41.45.jpeg', this, 'ribas-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.41.45.jpeg" alt="Panel Control">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.40.34.jpeg', this, 'ribas-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.40.34.jpeg" alt="Login Académico">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.41.09.jpeg', this, 'ribas-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.41.09.jpeg" alt="Gestión Facilitadores">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.41.08.jpeg', this, 'ribas-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.41.08.jpeg" alt="Ambientes Despachados">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 PROYECTO 4: ACADEMIA DEPORTIVA PRO (PWA PÚBLICA CON INTELIGENCIA ARTIFICIAL)
+                 ========================================================================== -->
+            <div id="academia-baloncesto" class="project-wrapper">
+                <div class="project-header">
+                    <div class="badge-group">
+                        <span class="badge">PWA</span>
+                        <span class="badge public"><i class="fa-solid fa-globe"></i> En Producción</span>
+                        <span class="badge ia-badge"><i class="fa-solid fa-brain"></i> Integración IA</span>
+                    </div>
+                    <h1>PWA Academia Deportiva Pro - Gestión Integral &amp; Evaluación con IA</h1>
+                </div>
+
+                <div class="project-content-grid">
+                    <div class="project-description">
+                        <h2>El Desafío del Rendimiento</h2>
+                        <p>
+                            Las academias de baloncesto carecen de herramientas centralizadas para evaluar cualitativa y cuantitativamente a sus atletas. Los entrenadores gastaban horas redactando informes de rendimiento y controlando pagos mensuales de forma dispersa. Se necesitaba una plataforma inteligente que combinara métricas físicas con análisis asistido por Inteligencia Artificial.
+                        </p>
+
+                        <h2>Nuestra Solución</h2>
+                        <p>
+                            Desarrollé una PWA sumamente innovadora con dos roles de usuario perfectamente segmentados. El **Staff Técnico** puede controlar la nómina de atletas, auditar pagos de mensualidad y evaluar la condición física, técnica y táctica mediante barras deslizantes dinámicas. Además, integré el **SDK de Google AI Studio (Gemini)** para generar de manera automatizada una crónica de rendimiento deportiva única y personalizada para cada jugador basada en sus métricas.
+                        </p>
+
+                        <ul class="bullet-points">
+                            <li><strong>Inteligencia Artificial Integrada:</strong> Generación automática de crónicas deportivas de rendimiento con Gemini para dar feedback profesional al atleta.</li>
+                            <li><strong>Doble Perfil de Usuario:</strong> Rol de Staff Técnico (gestión, cobros y evaluaciones) y Rol de Atleta (perfil editable, historial académico y visualización de progreso).</li>
+                            <li><strong>Reportes y Mensualidades:</strong> Los deportistas pueden reportar sus transferencias o pagos móviles de mensualidades directamente a la administración.</li>
+                        </ul>
+
+                        <a href="https://academia-deportiva-pro.web.app" target="_blank" class="btn-live">
+                            Visitar Academia Deportiva <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <h2 style="margin-top: 35px;">Tecnologías Aplicadas</h2>
+                        <div class="tech-stack">
+                            <div class="tech-box"><i class="fab fa-html5"></i> HTML5</div>
+                            <div class="tech-box"><i class="fab fa-css3-alt"></i> CSS3</div>
+                            <div class="tech-box"><i class="fab fa-js"></i> JS Nativo + Google SDK</div>
+                            <div class="tech-box"><i class="fa-solid fa-brain"></i> Google Gemini AI API</div>
+                            <div class="tech-box"><i class="fas fa-fire"></i> Firebase Firestore</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <div class="main-img">
+                            <img id="basket-large-img" src="img/WhatsApp Image 2026-07-16 at 10.40.02.jpeg" alt="Control de Rendimiento Deportivo">
+                        </div>
+                        <div class="thumbnails grid-4">
+                            <div class="thumb active" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.40.02.jpeg', this, 'basket-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.40.02.jpeg" alt="Control Físico">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.39.48.jpeg', this, 'basket-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.39.48.jpeg" alt="Redacción e IA">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.39.29.jpeg', this, 'basket-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.39.29.jpeg" alt="Reporte Pagos">
+                            </div>
+                            <div class="thumb" onclick="changeImage('img/WhatsApp Image 2026-07-16 at 10.40.18.jpeg', this, 'basket-large-img')">
+                                <img src="img/WhatsApp Image 2026-07-16 at 10.40.18.jpeg" alt="Acceso Seguro">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 PROYECTO 5: MI PORTAFOLIO (SITIO PÚBLICO)
+                 ========================================================================== -->
+            <div id="mi-portafolio" class="project-wrapper">
+                <div class="project-header">
+                    <div class="badge-group">
+                        <span class="badge">Sitio Web</span>
+                        <span class="badge public"><i class="fa-solid fa-code"></i> Portafolio</span>
+                    </div>
+                    <h1>Portafolio Digital - Marca Personal</h1>
+                </div>
+
+                <div class="project-content-grid">
+                    <div class="project-description">
+                        <h2>El Desafío de Diseño</h2>
+                        <p>
+                            Como desarrollador Frontend próximo a graduarse, mi portafolio debía ser mucho más que un currículum digital clásico. Quería una plataforma altamente atractiva, moderna, que cargara instantáneamente y que demostrara mi profunda obsesión por los detalles visuales de la interfaz de usuario (UI) y la experiencia de navegación (UX).
+                        </p>
+
+                        <h2>Nuestra Solución</h2>
+                        <p>
+                            Diseñé una plataforma de identidad digital única bajo una estética espacial de neón. El portafolio incorpora un sistema de variables personalizadas CSS que permite alternar dinámicamente entre modo oscuro (azul espacial profundo) y modo claro (azul hielo limpio), recordando la elección del usuario gracias a `localStorage`. Las transiciones fluidas de las tarjetas con efecto Glassmorphism demuestran habilidades sólidas en maquetación.
+                        </p>
+
+                        <ul class="bullet-points">
+                            <li><strong>Arquitectura Modular e Inteligente:</strong> Control dinámico mediante un enrutador por Hash (`hashchange`) para renderizar únicamente el proyecto seleccionado en pantalla.</li>
+                            <li><strong>Consistencia Estética Total:</strong> La paleta de colores azul se preserva minuciosamente en todas las secciones, garantizando una identidad visual corporativa unificada.</li>
+                            <li><strong>Perfecto Responsive Design:</strong> Adaptado milimétricamente para smartphones, tablets y pantallas de escritorio grandes.</li>
+                        </ul>
+
+                        <h2>Tecnologías Aplicadas</h2>
+                        <div class="tech-stack">
+                            <div class="tech-box"><i class="fab fa-html5"></i> HTML5 Semántico</div>
+                            <div class="tech-box"><i class="fab fa-css3-alt"></i> CSS3 Grid &amp; Variables</div>
+                            <div class="tech-box"><i class="fab fa-js"></i> JavaScript</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <!-- Muestra de Mock Estético para el Portafolio al no tener una captura final -->
+                        <div class="main-img" style="background: linear-gradient(135deg, #070a13 0%, #0070f3 100%); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: var(--neon-blue); padding: 20px;">
+                                <i class="fa-solid fa-laptop-code" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                                <h3 style="color: white; font-weight: 800;">JHSOUR PORTFOLIO</h3>
+                                <p style="color: var(--text-gray); font-size: 0.95rem;">Maquetación Limpia • Modo Claro/Oscuro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================================
+                PROYECTO 5: MI PORTAFOLIO (SITIO PÚBLICO)
+                 ========================================================================== -->
+
+
+
+            <!-- ==========================================================================
+                 PANTALLA DE ERROR / FALLBACK
+                 ========================================================================== -->
+            <div id="fallback-message" class="fallback-view">
+                <h2>Caso de Estudio no Seleccionado</h2>
+                <p>Por favor, regresa al inicio y selecciona uno de los proyectos activos en mi portafolio para auditar su documentación detallada.</p>
+                <a href="index.html" class="btn-live"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Jhonny Solorzano Urbina.</p>
+        </div>
+    </footer>
+
+<!-- VENTANA MODAL PARA VISUALIZAR IMÁGENES (Añadir aquí) -->
+    <div id="custom-image-modal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-modal-target" alt="Vista ampliada del proyecto">
+    </div>
+    <script src="proyectos.js">
+        
+    </script>
+
+</body>
+</html>

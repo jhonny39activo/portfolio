@@ -1,0 +1,801 @@
+/* ==========================================================================
+   VARIABLES CSS (MODO OSCURO - POR DEFECTO)
+   ========================================================================== */
+:root {
+    /* Paleta de Colores Azul y Contraste */
+    --bg-dark: #070a13;         
+    --bg-card: rgba(13, 20, 38, 0.45); 
+    --primary-blue: #0070f3;    
+    --neon-blue: #00f0ff;       
+    --purple-glow: #7000ff;     
+    --text-white: #ffffff;      
+    --text-gray: #94a3b8;       
+    --border-color: rgba(0, 240, 255, 0.15); 
+    
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --border-radius-lg: 20px;
+    --border-radius-md: 12px;
+}
+
+/* ==========================================================================
+   VARIABLES CSS (MODO CLARO)
+   ========================================================================== */
+.light-theme {
+    --bg-dark: #f0f4f8;         /* Fondo azul hielo limpio y claro */
+    --bg-card: rgba(255, 255, 255, 0.8); /* Tarjetas blancas traslúcidas */
+    --primary-blue: #0056b3;    /* Azul más oscuro para mejor contraste y legibilidad */
+    --neon-blue: #0070f3;       /* Azul eléctrico vibrante */
+    --purple-glow: #d6c4ff;     /* Brillo violeta muy suave de fondo */
+    --text-white: #0f172a;      /* Títulos en azul pizarra oscuro */
+    --text-gray: #475569;       /* Descripciones en gris pizarra */
+    --border-color: rgba(0, 86, 179, 0.1); /* Bordes sutiles azulados */
+}
+
+/* ... (Estilos intermedios) ... */
+
+/* Alineación de la barra de navegación para incluir el botón */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botón de cambio de tema */
+.theme-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(5px);
+}
+
+.theme-btn:hover {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+/* Ajustes específicos de modo claro para los orbes del fondo */
+.light-theme .orbe-1 {
+    opacity: 0.15; /* Menos opacidad para que no sature el modo claro */
+    background: var(--neon-blue);
+}
+
+.light-theme .orbe-2 {
+    opacity: 0.12;
+    background: #8b5cf6;
+}
+
+/* Ajustar colores de iconos de redes sociales en modo claro */
+.light-theme .social-icon {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-white);
+}
+
+.light-theme .social-icon:hover {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    background: rgba(0, 112, 243, 0.05);
+}
+
+/* Inputs de formulario en modo claro */
+.light-theme .form-group input, 
+.light-theme .form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-white);
+}
+
+.light-theme .nav-links a{
+    color: #000;
+}
+.light-theme .btn-secondary {
+    border: solid 1px #000;
+}
+
+/* ==========================================================================
+   RESET & ESTILOS BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-gray);
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   FONDO LLAMATIVO DINÁMICO (ORBES DE GLOW)
+   ========================================================================== */
+.glow-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.orbe {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+}
+
+/* Luz azul cyan en la parte superior izquierda */
+.orbe-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--neon-blue);
+    top: -100px;
+    left: -150px;
+}
+
+/* Luz púrpura/azul profunda en el área central derecha */
+.orbe-2 {
+    width: 600px;
+    height: 600px;
+    background: var(--purple-glow);
+    top: 40%;
+    right: -200px;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN (GLASSMORPHISM)
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background: rgba(7, 10, 19, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--neon-blue);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding: 180px 0 100px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+.hero-info h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-white);
+    margin-bottom: 12px;
+}
+.active-h2 {
+    color: var(--primary-blue);
+}
+
+.hero-info h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 24px;
+}
+
+.hero-info p {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* Botones con transiciones elegantes */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--text-white);
+    box-shadow: 0 10px 25px rgba(0, 112, 243, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.hero-avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-glow {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(45deg, var(--primary-blue), var(--neon-blue));
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+}
+
+.avatar-glow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg-dark);
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES DE SECCIONES
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: var(--neon-blue);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-white);
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   SOBRE MÍ (GLASS CARD)
+   ========================================================================== */
+.about-section {
+    padding: 100px 0;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card p {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.05);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    background: rgba(0, 240, 255, 0.05);
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   HABILIDADES (SKILLS)
+   ========================================================================== */
+.skills-section {
+    padding: 100px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-md);
+    padding: 30px 20px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.skill-icon.html { color: #e34c26; }
+.skill-icon.css { color: #264de4; }
+.skill-icon.js { color: #f0db4f; }
+.skill-icon.firebase { color: #ffca28; }
+
+.skill-card h3 {
+    color: var(--text-white);
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+}
+/* ==========================================================================
+   PROYECTOS (Corregido y Optimizado)
+   ========================================================================== */
+.projects-section {
+    padding: 100px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 20px 40px rgba(0, 240, 255, 0.1);
+}
+
+.project-img {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
+}
+
+.project-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Empuja el footer hacia abajo para que todas las tarjetas se alineen */
+}
+
+.project-tag {
+    background: rgba(0, 112, 243, 0.15);
+    color: var(--neon-blue);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 16px;
+    align-self: flex-start;
+}
+
+.project-body h3 {
+    color: var(--text-white);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.project-body p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    color: var(--text-gray);
+}
+
+/* --- NUEVO FOOTER ALINEADO CON EL BOTÓN "¿SABER MÁS?" --- */
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    margin-top: auto; /* Hace que se quede siempre al fondo de la tarjeta */
+}
+
+.project-tech {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-tech i {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    transition: var(--transition-smooth);
+}
+
+/* Colores personalizados para tus iconos de tecnologías */
+.project-tech i.fa-html5 { color: #e34c26; }
+.project-tech i.fa-css3-alt { color: #264de4; }
+.project-tech i.fa-js { color: #f0db4f; }
+.project-tech i.fa-fire { color: #ffca28; }
+
+.project-tech span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    color: var(--text-white);
+}
+
+/* Estilo interactivo para el botón */
+.btn-more {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--neon-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.btn-more:hover {
+    color: var(--text-white);
+    transform: translateX(5px);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+/* Soporte para el modo claro en el separador del footer */
+.light-theme .project-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   CONTACTO
+   ========================================================================== */
+.contact-section {
+    padding: 100px 0 150px;
+}
+
+.contact-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: var(--border-radius-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+    background: rgba(7, 10, 19, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 14px;
+    color: var(--text-white);
+    font-family: var(--font-main);
+    transition: var(--transition-smooth);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES 
+   ========================================================================== */
+
+/* --- TABLETS Y PANTALLAS MEDIANAS (MÁXIMO 992px) --- */
+@media (max-width: 992px) {
+    /* Hero Section Adaptativo */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-avatar {
+        order: -1; /* Mueve la foto arriba del texto en móviles para mejor jerarquía */
+    }
+    
+    .avatar-glow {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .hero-info h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-info h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-info p {
+        margin: 0 auto 30px;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+
+    /* Ajustes de Secciones */
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+    
+    /* Grid de Proyectos a 2 columnas */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* --- TELÉFONOS INTELIGENTES (MÁXIMO 768px) --- */
+@media (max-width: 768px) {
+    /* Barra de Navegación Móvil Básica */
+    .nav-links {
+        display: none; /* Oculta la lista para prevenir desbordamientos; ideal para un menú hamburguesa futuro */
+    }
+    
+    .navbar {
+        padding: 15px 0;
+    }
+
+    /* Secciones generales menos espaciadas en móvil */
+    .hero-section {
+        padding: 130px 0 60px;
+    }
+    
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    /* Tarjeta Sobre Mí */
+    .about-card {
+        padding: 25px 20px;
+    }
+    
+    .about-card p {
+        font-size: 1rem;
+        text-align: left; /* Más legible en pantallas angostas */
+    }
+
+    /* Formulario de Contacto en una sola columna */
+    .contact-box {
+        padding: 30px 20px;
+    }
+    
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0; /* El margen inferior de .form-group ya maneja la separación */
+    }
+}
+
+/* --- TELÉFONOS PEQUEÑOS (MÁXIMO 480px) --- */
+@media (max-width: 480px) {
+    .hero-info h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-info h2 {
+        font-size: 1.3rem;
+    }
+    
+    .avatar-glow {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-actions {
+        flex-direction: column; /* Apila los botones verticalmente si no caben de lado */
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Grid de Proyectos y Habilidades a 1 sola columna pura */
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card .project-img {
+        height: 180px;
+    }
+    
+    .project-body {
+        padding: 20px;
+    }
+    
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .btn-more {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
